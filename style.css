@@ -13,6 +13,7 @@
     --white: #fff;
     --first-grey: #aaa;
     --grey: #999;
+    --blue-two: #4285F4;
     
 }
 
@@ -62,7 +63,7 @@ body{
 }
 
 .content p{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 .content .requirement-list{
@@ -83,6 +84,33 @@ body{
     color: var(--first-grey);
 }
 
+.requirement-list li.valid i{
+    font-size: 0.8rem;
+    color: var(--blue-two);
+}
+
 .requirement-list li span{
     margin-left: 12px;
+}
+
+.requirement-list li.valid span{
+    color: var(--grey);
+}
+
+@media screen and (max-width: 500px) {
+    body, wrapper {
+        padding: 15px;
+    }
+    .wrapper .pass-field {
+        height: 55px;
+    }
+    .pass-field input, .content p {
+        font-size: 1.1rem;
+    }
+    .pass-field i, .requirement-list li{
+        font-size: 0.9rem;
+    }
+    .requirement-list li span {
+        margin-left: 7px;
+    }
 }
